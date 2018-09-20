@@ -6,7 +6,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 @pytest.fixture
 def driver(request):
-    wd = webdriver.Chrome()
+#    wd = webdriver.Firefox(firefox_binary="c:\\Program Files (x86)\\Nightly\\firefox.exe")
+    wd = webdriver.Firefox(firefox_binary="C:\\Program Files\\Mozilla Firefox\\firefox.exe")
+    print(wd.capabilities)
     request.addfinalizer(wd.quit)
     return wd
 
@@ -14,7 +16,7 @@ def driver(request):
 def test_example(driver):
     driver.get("http://www.google.com/")
     driver.find_element_by_name("q").send_keys("webdriver")
+#    driver.find_element_by_name("btnK").sendKeys(Keys.ENTER)
     driver.find_element_by_name("btnK").click()
-#    driver.find_element_by_name("btnG").sendKeys(Keys.ENTER)
+#    driver.find_element_by_name("btnG").click()
     WebDriverWait(driver, 10).until(EC.title_is("webdriver - Поиск в Google"))
-
