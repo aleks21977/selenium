@@ -4,6 +4,7 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxBinary;
@@ -39,10 +40,8 @@ public class MyFirstTest {
     @Test
     public void myFirstTest() {
         driver.get("http://www.google.com/");
-        driver.findElement(By.id("gs_ok0")).click();
-        driver.findElement(By.id("K32")).click();
         driver.findElement(By.name("q")).sendKeys("webdriver");
-        driver.findElement(By.name("btnG")).click();
+        driver.findElement(By.name("q")).sendKeys(Keys.ENTER);
         wait.until(titleIs("webdriver - Поиск в Google"));
     }
 
