@@ -1,5 +1,6 @@
 .idea
 .gradle
+gradle/
 build/
 venv/
 .pytest_cache/
@@ -17,3 +18,9 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 *.iml
 *.log
+java-example/gradlew
+java-example/gradlew.bat
+java-example/settings.gradle
+java-example1/gradlew.bat
+java-example1/gradlew
+*.class
