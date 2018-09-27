@@ -25,10 +25,12 @@ public class MyFirstTest {
 
     @Before
     public void start() {
+//        NEW Scheme
 //        FirefoxOptions options = new FirefoxOptions();
 //        options.setBinary(new FirefoxBinary(new File("c:\\Program Files\\Mozilla Firefox\\firefox.exe")));
 //        WebDriver driver = new FirefoxDriver(options);
 
+//        OLD Scheme
 //        FirefoxBinary bin = new FirefoxBinary(new File("c:\\Program Files\\Mozilla Firefox\\firefox.exe"));
 //        WebDriver driver = new FirefoxDriver(bin, new FirefoxProfile());
 
